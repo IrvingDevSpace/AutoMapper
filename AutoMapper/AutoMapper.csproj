@@ -43,11 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\StudentDto2.cs" />
+    <Compile Include="Enums\ClassTag.cs" />
+    <Compile Include="Enums\MappingTag.cs" />
+    <Compile Include="Factories\Implementations\BoolMapping.cs" />
+    <Compile Include="Factories\Implementations\CharMapping.cs" />
+    <Compile Include="Factories\Implementations\DoubleMapping.cs" />
+    <Compile Include="Factories\Implementations\EnumMapping.cs" />
+    <Compile Include="Factories\Implementations\FloatMapping.cs" />
+    <Compile Include="Factories\Implementations\IntMapping.cs" />
+    <Compile Include="Factories\Implementations\LongMapping.cs" />
+    <Compile Include="Factories\Implementations\MappingBase.cs" />
+    <Compile Include="Factories\Implementations\MappingFactory.cs" />
+    <Compile Include="Factories\Implementations\StringMapping.cs" />
+    <Compile Include="Factories\Interfaces\IMappingFactory.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="Dtos\StudentDto.cs" />
+    <Compile Include="Models\ClassRoom.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
