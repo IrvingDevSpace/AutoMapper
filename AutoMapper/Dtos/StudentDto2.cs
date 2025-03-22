@@ -1,10 +1,9 @@
 ﻿using AutoMapper.Models;
-using System.Collections.Generic;
 
 namespace AutoMapper.Dtos
 {
-    internal class StudentDto2
+    internal class StudentDto2<T>
     {
-        public List<Game> ClassRooms { get; set; }
+        public Game<T>[] ClassRooms { get; set; }
     }
 }

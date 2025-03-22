@@ -4,6 +4,6 @@ namespace AutoMapper.Factories.Implementations
 {
     internal abstract class MappingBase
     {
-        public abstract object Map<TSource>(TSource source, Type destinationType);
+        public abstract object Map(Type srcType, object source, Type destType, Func<Type, object, Type, object> mappingFunc);
     }
 }

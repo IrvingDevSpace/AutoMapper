@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace AutoMapper.Models
+﻿namespace AutoMapper.Models
 {
-    internal class ClassRoom
+    internal class ClassRoom<T>
     {
-        public string Name { get; set; }
+        public Item<bool, T> Name { get; set; }
 
-        public List<Item> Items { get; set; }
+        //public List<Item<T>> Items { get; set; }
     }
 }

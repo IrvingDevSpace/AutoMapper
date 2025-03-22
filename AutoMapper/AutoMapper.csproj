@@ -48,7 +48,9 @@
     <Compile Include="Enums\MappingTag.cs" />
     <Compile Include="Factories\Implementations\BoolMapping.cs" />
     <Compile Include="Factories\Implementations\CharMapping.cs" />
+    <Compile Include="Factories\Implementations\ClassMapping.cs" />
     <Compile Include="Factories\Implementations\DoubleMapping.cs" />
+    <Compile Include="Factories\Implementations\EnumerableMapping.cs" />
     <Compile Include="Factories\Implementations\EnumMapping.cs" />
     <Compile Include="Factories\Implementations\FloatMapping.cs" />
     <Compile Include="Factories\Implementations\IntMapping.cs" />

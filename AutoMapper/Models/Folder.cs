@@ -1,7 +1,7 @@
 ﻿namespace AutoMapper.Models
 {
-    internal class Folder
+    internal class Folder<T, T2>
     {
-        public int Count { get; set; }
+        public T Count { get; set; }
     }
 }

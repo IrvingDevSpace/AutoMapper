@@ -1,7 +1,7 @@
 ﻿namespace AutoMapper.Models
 {
-    internal class Item
+    internal class Item<T, T2>
     {
-        public int Count { get; set; }
+        public T2 Count { get; set; }
     }
 }

@@ -9,6 +9,8 @@
         Char,
         String,
         Bool,
-        Enum
+        Enum,
+        Class,
+        Enumerable
     }
 }

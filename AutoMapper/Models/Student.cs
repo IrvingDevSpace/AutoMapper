@@ -11,6 +11,6 @@ namespace AutoMapper.Models
         public List<int> Nums { get; set; }
 
 
-        public ClassRoom ClassRoom { get; set; }
+        //public ClassRoom ClassRoom { get; set; }
     }
 }

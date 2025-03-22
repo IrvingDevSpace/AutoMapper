@@ -26,6 +26,10 @@ namespace AutoMapper.Factories.Implementations
                     return new BoolMapping();
                 case MappingTag.Enum:
                     return new EnumMapping();
+                case MappingTag.Enumerable:
+                    return new EnumerableMapping();
+                case MappingTag.Class:
+                    return new ClassMapping();
                 default:
                     throw new ArgumentOutOfRangeException($"不支援的轉換類型 : {mappingTag}");
             }

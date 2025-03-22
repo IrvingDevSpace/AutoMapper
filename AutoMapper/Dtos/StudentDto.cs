@@ -1,5 +1,4 @@
 ﻿using AutoMapper.Enums;
-using AutoMapper.Models;
 using System.Collections.Generic;
 
 namespace AutoMapper.Dtos
@@ -13,6 +12,6 @@ namespace AutoMapper.Dtos
 
         public List<bool> Nums { get; set; }
 
-        public ClassRoom ClassRoom { get; set; }
+        //public ClassRoom ClassRoom { get; set; }
     }
 }

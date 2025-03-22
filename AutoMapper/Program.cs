@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper.Dtos;
+using AutoMapper.Models;
+using System.Collections.Generic;
 
 namespace AutoMapper
 {
@@ -23,9 +25,9 @@ namespace AutoMapper
             //student.ClassRoom.Name = "C";
 
             //Student2 student2 = new Student2();
-            //student2.ClassRooms = new List<ClassRoom>
+            //student2.ClassRooms = new List<ClassRoom<string>>
             //{
-            //    new ClassRoom
+            //    new ClassRoom<string>
             //    {
             //        Name = "500",
             //        Items = new List<Item>
@@ -38,48 +40,71 @@ namespace AutoMapper
             //    new ClassRoom
             //    {
             //        Name = "999",
-            //        Items = new List<Item>
+            //        Items = new List<Item < int >>
             //        {
-            //            new Item { Count = 2000},
-            //            new Item { Count = 5000 },
-            //            new Item { Count = 9},
+            //            new Item<int> { Count = 2000},
+            //            new Item<int> { Count = 5000 },
+            //            new Item<int> { Count = 9},
             //        }
             //    },
             //    new ClassRoom
             //    {
             //        Name = "77",
-            //        Items = new List<Item>
+            //        Items = new List<Item<int>>
             //        {
-            //            new Item { Count = 1},
-            //            new Item { Count = 2 },
-            //            new Item { Count = 999},
+            //            new Item<int> { Count = 1},
+            //            new Item<int> { Count = 2 },
+            //            new Item<int> { Count = 999},
             //        }
             //    },
             //};
 
-            //var dto2 = Mapper.Map<Student2, StudentDto2>(student2);
+            Student2 student2 = new Student2();
+            student2.ClassRooms = new List<ClassRoom<int>>
+            {
+                new ClassRoom<int>
+                {
+                    Name =  new Item<bool, int> { Count = 77},
+                },
+                new ClassRoom<int>
+                {
+                    Name =  new Item<bool, int> { Count = 25 },
+                },
+                new ClassRoom<int>
+                {
+                    Name =  new Item<bool, int> { Count = 100 },
+                },
+            };
+
+            var dto2 = Mapper<Student2, StudentDto2<string>>.Map(student2);
+
+            //Item<string> item = new Item<string>
+            //{
+            //    Count = "95"
+            //};
+            //var folder = Mapper<Item<string>, Folder<int>>.Map(item);
 
 
-            Test<string, int> test = new Test<string, int>();
+            //Test<string, int> test = new Test<string, int>();
 
-            //var a = test.GetType().IsGenericType;
+            ////var a = test.GetType().IsGenericType;
+            ////var types = test.GetType().GetGenericArguments();
+
+            ////// test.GetType() => Test<string, int>
+            //////IEnumberable`2
+            ////var temp = test.GetType().GetGenericTypeDefinition();
+
+            ////Type newType = temp.MakeGenericType(new Type[] { typeof(bool), typeof(float) });
+            ////object obj = Activator.CreateInstance(newType);
+
+            //Type type = typeof(Vaild<,>);
+            //object o = type;
+
             //var types = test.GetType().GetGenericArguments();
 
-            //// test.GetType() => Test<string, int>
-            ////IEnumberable`2
-            //var temp = test.GetType().GetGenericTypeDefinition();
+            //var newType = type.GetGenericTypeDefinition().MakeGenericType(types);
 
-            //Type newType = temp.MakeGenericType(new Type[] { typeof(bool), typeof(float) });
             //object obj = Activator.CreateInstance(newType);
-
-            Type type = typeof(Vaild<,>);
-            object o = type;
-
-            var types = test.GetType().GetGenericArguments();
-
-            var newType = type.GetGenericTypeDefinition().MakeGenericType(types);
-
-            object obj = Activator.CreateInstance(newType);
         }
 
         class Test<T1, T2>
