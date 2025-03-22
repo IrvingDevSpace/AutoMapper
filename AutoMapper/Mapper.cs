@@ -19,6 +19,7 @@ namespace AutoMapper
             return dests.First();
         }
 
+
         public static IEnumerable<TDestination> Map<TSource, TDestination>(IEnumerable<TSource> sources) where TDestination : new()
         {
             if (sources == null)
@@ -75,14 +76,15 @@ namespace AutoMapper
 
                         foreach (var source in sourceEnumerable)
                         {
-                            // 取得要轉換的目標type tag
-                            MappingTag mappingTag = GetMappingTag(destElementType);
-                            // 依照type tag取得Mapping實作
-                            MappingBase mapping = mappingFactory.CreateMapping(mappingTag);
-                            // 將src的值轉為dest的型別
-                            object destValue = mapping.Map(source, destElementType);
+                            var mappedClass = RecursiveMap(source.GetType(), source, destElementType);
+                            //// 取得要轉換的目標type tag
+                            //MappingTag mappingTag = GetMappingTag(destElementType);
+                            //// 依照type tag取得Mapping實作
+                            //MappingBase mapping = mappingFactory.CreateMapping(mappingTag);
+                            //// 將src的值轉為dest的型別
+                            //object destValue = mapping.Map(source, destElementType);
                             // 加入dest List
-                            destList.Add(destValue);
+                            destList.Add(mappedClass);
                         }
                         // 轉換完整陣列後設定dest的值
                         destPropInfo.SetValue(dest, destList);

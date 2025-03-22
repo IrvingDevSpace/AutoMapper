@@ -60,7 +60,11 @@
     <Compile Include="Mapper.cs" />
     <Compile Include="Dtos\StudentDto.cs" />
     <Compile Include="Models\ClassRoom.cs" />
+    <Compile Include="Models\Folder.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Student2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
